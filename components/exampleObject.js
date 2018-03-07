@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 const React = require('react');
 const Component = require('react-pure-render/component');
 
 class ExampleObject extends Component {
 
   static propTypes = {
-    example: React.PropTypes.string.isRequired,
+    example: PropTypes.string.isRequired,
   };
 
   render() {

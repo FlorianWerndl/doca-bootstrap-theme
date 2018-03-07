@@ -6,6 +6,7 @@
 
  body {
   overflow-x: hidden;
+  background: white;
  }
 
 /* Toggle Styles */
@@ -143,7 +144,7 @@ h2 {
   font-size: 22px;
   line-height: 25px;
   margin: 0px;
-  padding: 12.5px 25px 12.5px 25px;
+  /* padding: 12.5px 25px 12.5px 25px; */
 }
 
 h3 {
@@ -173,6 +174,9 @@ h5 {
 .panel {
   margin-bottom: 25px;
   margin-top: 25px;
+  border-radius: 0;
+  background: #fafafa;
+  padding: 25px;
 }
 
 .panel-body, .list-group-item {
@@ -186,7 +190,7 @@ h5 {
 .panel-heading {
   border-radius: 3.3px;
   padding: 0px;
-  margin: 75px 0px 0px 0px;
+  /* margin: 75px 0px 0px 0px; */
 }
 
 .btn {
@@ -225,7 +229,11 @@ pre {
 
 .table {
   padding: 0px;
-  margin: 0px;
+  margin: 10px 0 0 0;
+}
+
+.table>thead {
+  background: whitesmoke;
 }
 
 .table>tbody>tr>td,
@@ -234,8 +242,16 @@ pre {
 .table>tfoot>tr>th,
 .table>thead>tr>td,
 .table>thead>tr>th {
-  padding: 12.5px 25px 12.5px 0px;
+  padding: 12.5px 25px 12.5px 12.5px;
 }
+
+.table>tbody>tr>td {
+  background-color: white;
+}
+
+/*.table>tbody>tr:nth-child(odd)>td {*/
+  /*background-color: #fafafa*/
+/*}*/
 
 .constraints {
   list-style: none;
@@ -271,4 +287,37 @@ code {
 li.read-only {
   font-weight: bolder;
   font-style: italic ;
+}
+
+.description {
+  margin: 10px 0;
+}
+
+.btn-custom {
+  background-color: #dedede;
+  border: none;
+  border-bottom: 1px solid #bababa;
+  color: #333;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0.6em 1em 0.53333em;
+  -webkit-text-stroke: 0;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  display: inline-block;
+  vertical-align: middle;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
 }

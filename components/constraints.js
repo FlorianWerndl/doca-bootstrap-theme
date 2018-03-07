@@ -1,11 +1,12 @@
 const React = require('react');
 const Component = require('react-pure-render/component');
 const _ = require('lodash/core');
+import PropTypes from 'prop-types';
 
 class Constraints extends Component {
 
   static propTypes = {
-    constraints: React.PropTypes.object,
+    constraints: PropTypes.object,
   };
 
   considerType(value) {

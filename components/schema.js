@@ -26,24 +26,22 @@ class Schema extends Component {
     const { schema } = this.props;
     const { showDefinition } = this.state;
     return (
-      <article className="panel panel-primary">
+      <article className="panel">
         <div className="panel-heading">
           <div id={schema.get('html_id')} />
           <h2>{schema.get('title')}</h2>
         </div>
         <div className="panel-body">
-          <h3>{schema.get('description')}</h3>
-          {schema.get('cfExtendedDescription') &&
-            <MarkdownPreview value={schema.get('cfExtendedDescription')} />}
+          <p className="description">{schema.get('description')}</p>
+            {schema.get('cfExtendedDescription') &&
+          <MarkdownPreview value={schema.get('cfExtendedDescription')} />}
 
           <header id={`${schema.get('html_id')}-properties`}>
             {IS_JAVASCRIPT &&
-              <p>
-                <a onClick={this.handleToggle} className="btn btn-info">
-                  <span>{showDefinition ? 'Hide' : 'Show'}</span>{' '}
-                  properties and constraints defined on the object
-                </a>
-              </p>
+              <a onClick={this.handleToggle} className="btn btn-custom">
+                <span>{showDefinition ? 'Hide' : 'Show'}</span>{' '}
+                definition
+              </a>
             }
           </header>
 

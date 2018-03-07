@@ -1,5 +1,5 @@
 /* eslint global-require: 0 */
-
+import PropTypes from 'prop-types';
 const React = require('react');
 const ImmutablePropTypes = require('react-immutable-proptypes');
 const Component = require('react-pure-render/component');
@@ -8,8 +8,8 @@ class Definition extends Component {
 
   static propTypes = {
     definitions: ImmutablePropTypes.map,
-    contextId: React.PropTypes.string,
-    fieldPointer: React.PropTypes.string,
+    contextId: PropTypes.string,
+    fieldPointer: PropTypes.string,
   };
 
   state = {

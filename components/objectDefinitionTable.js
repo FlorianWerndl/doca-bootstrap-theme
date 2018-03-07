@@ -6,20 +6,21 @@ const ImmutableMap = require('immutable').Map;
 const ImmutablePropTypes = require('react-immutable-proptypes');
 const Component = require('react-pure-render/component');
 const Definition = require('./definition');
+import PropTypes from 'prop-types';
 
 class ObjectDefinitionTable extends Component {
 
   static propTypes = {
     definitions: ImmutablePropTypes.map,
-    contextId: React.PropTypes.string,
-    fieldPointer: React.PropTypes.string
+    contextId: PropTypes.string,
+    fieldPointer: PropTypes.string
   };
 
   render() {
     const { definitions } = this.props;
     return (
       <table className="table table-hover">
-        <thead>
+        <thead className="table-header">
           <tr>
             <th><p>Name <small>/type</small></p></th>
             <th><p>Description <small>/example</small></p></th>

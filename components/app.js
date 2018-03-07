@@ -1,5 +1,6 @@
 const React = require('react');
 const ImmutablePropTypes = require('react-immutable-proptypes');
+import PropTypes from 'prop-types';
 const Component = require('react-pure-render/component');
 const Sidebar = require('./sidebar');
 const Schema = require('./schema');
@@ -8,7 +9,7 @@ class App extends Component {
 
   static propTypes = {
     schemas: ImmutablePropTypes.list.isRequired,
-    config: React.PropTypes.object,
+    config: PropTypes.object,
   };
 
   render() {
@@ -23,9 +24,9 @@ class App extends Component {
               <div className="col-lg-12">
                 <h1>{config.title}</h1>
                 {schemas
-                  .filter(schema => !schema.get('cfHidden'))
-                  .valueSeq()
-                  .map(schema => <Schema key={schema.get('id')} schema={schema} />)
+                .filter(schema => !schema.get('cfHidden'))
+                .valueSeq()
+                .map(schema => <Schema key={schema.get('id')} schema={schema} />)
                 }
               </div>
             </div>

@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types';
 const React = require('react');
+
 
 const Head = ({ cssBundle, title }) =>
   <head>
@@ -14,8 +16,8 @@ const Head = ({ cssBundle, title }) =>
 
 
 Head.propTypes = {
-  cssBundle: React.PropTypes.string,
-  title: React.PropTypes.string,
+  cssBundle: PropTypes.string,
+  title: PropTypes.string,
 };
 
 Head.displayName = 'Head';
